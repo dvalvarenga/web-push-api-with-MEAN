@@ -9,10 +9,18 @@ cd website/push-app
 # npm start
 ! Now it will serve web app on http://localhost:4200 (wait for step 2 to be completed to get expected results.)
 
+
+
+
 2. move to the /server directory. Now execute following steps inside this directory
 # npm i
 # npm start
-! Now It will start your nodejs server on port 3000. Goto http://localhost:3000 for server side web page for pushing message.
+! Now It will start your nodejs server on port 3000. Goto http://localhost:3000 for our server hosted web page. (this page simply send your requested text message to our server, just like postman)
+
+
+
+
+
 
 This project has 3 components.
 1. Web App which will be used to subscribe for push notifications.
