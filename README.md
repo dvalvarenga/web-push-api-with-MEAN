@@ -4,7 +4,7 @@ Web Push API with angular and nodejs as server. with the help of GMC
 steps to run the application.
 
 1. move inside the angular web application folder to build and run it. 
-cd website/push-app
+# cd website/push-app
 # npm i
 # npm start
 ! Now it will serve web app on http://localhost:4200 (wait for step 2 to be completed to get expected results.)
