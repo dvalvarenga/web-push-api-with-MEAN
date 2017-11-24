@@ -1,0 +1,16 @@
+<!--The whole content below can be removed with the new code.-->
+<div style="text-align:center">
+    <header>
+        <h1>Welcome to {{title}}!!</h1>
+    </header>
+    <br>
+    <p>Welcome to the push messaging demo. The button below needs to be fixed to support subscribing to push.</p>
+    <p>
+        <button *ngIf="!pushSubscriber.isSubscribed" [disabled]="!pushSubscriber.isSupported" (click)="pushSubscriber.subscribe()">
+            Enable Push Messaging
+        </button>
+        <button *ngIf="pushSubscriber.isSubscribed" [disabled]="!pushSubscriber.isSupported" (click)="pushSubscriber.unsubscribe()">
+            Disable Push Messaging
+        </button>
+    </p>
+</div>
