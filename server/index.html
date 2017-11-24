@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html style="text-align:center">
+
+<head>
+    <meta charset="utf-8">
+    <script type="text/javascript" src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
+    <title>Push Message Client</title>
+    <style>
+        header {
+            padding: 15px 0 12px 0;
+            background-color: #00bcd4;
+            color: white;
+        }
+    </style>
+    <script type="text/javascript">
+        function sendMessage() {
+            var txtBox = document.getElementById("message");
+            console.log(txtBox.value);
+
+            $.ajax({
+                contentType: 'application/json',
+                data: JSON.stringify({
+                    message: txtBox.value
+                }),
+                dataType: 'json',
+                success: function (data) {
+                    console.log(data);
+                    var resultPara = document.getElementById("result");
+                    resultPara.innerText = data.responseText;
+                },
+                error: function (error) {
+                    console.log(error.responseText);
+                    var resultPara = document.getElementById("result");
+                    resultPara.innerText = error.responseText;
+                },
+                processData: false,
+                type: 'POST',
+                url: '/sendmessage/'
+            });
+        }
+    </script>
+
+</head>
+
+<body>
+
+    <header>
+        <h1>Push Message</h1>
+    </header>
+
+    <p>Welcome to the push messaging client. Type message you want to send/push</p>
+    <br>
+    <textarea id="message" rows="5" cols="50" placeholder="your message..."></textarea>
+    <p>
+        <button onclick="sendMessage()">
+                Push Message
+        </button>
+    </p>
+    <p id="result">
+    </p>
+</body>
+
+</html>
