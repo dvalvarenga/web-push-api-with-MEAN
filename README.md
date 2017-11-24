@@ -12,7 +12,7 @@ steps to run the application.
 
 
 
-2. move to the /server directory. Now execute following steps inside this directory
+2. Now leave that terminal open and using another one move to the /server directory. Now execute following steps inside this directory
 # npm i
 # npm start
 ! Now It will start your nodejs server on port 3000. Goto http://localhost:3000 for our server hosted web page. (this page simply send your requested text message to our server, just like postman)
